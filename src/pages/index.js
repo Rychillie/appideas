@@ -1,3 +1,13 @@
 import React from "react"
+import Layout from "../layouts/layout"
+import Card from "../components/card"
 
-export default () => <div>Hello world!</div>
+const IndexPage = () => {
+  return (
+    <Layout>
+        <Card/>
+    </Layout>
+  )
+}
+
+export default IndexPage
