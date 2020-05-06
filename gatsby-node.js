@@ -6,11 +6,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     {
         allMarkdownRemark(
             sort: {
-                edges {
-                    node {
-                        frontmatter {
-                            path
-                        }
+            edges {
+                node {
+                    frontmatter {
+                        path
                     }
                 }
             }
