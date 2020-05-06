@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../layouts/layout"
 import Card from "../components/card"
 
-const IdeaPage = () => {
+const AboutPage = () => {
   return (
     <Layout>
         <Card/>
@@ -10,4 +10,4 @@ const IdeaPage = () => {
   )
 }
 
-export default IdeaPage
+export default AboutPage
