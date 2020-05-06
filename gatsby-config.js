@@ -9,9 +9,9 @@ module.exports = {
     title: 'AppIdeas',
     description: `a list of app ideas for traning`,
     author: `@rychillie`,
-    siteUrl: `https://appideas.rychillie.net`,
+    siteUrl: `https://appideas.simples.digital`,
     titleTemplate: "%s · AppIdeas",
-    url: "https://appideas.rychillie.net",
+    url: "https://appideas.simples.digital",
     image: "/images/profile.jpg",
   },
   plugins: [
