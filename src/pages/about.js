@@ -8,7 +8,6 @@ const md = (data) => {
   console.log(frontmatter.title)
   return (<div>
     <h1>{frontmatter.title}</h1>
-    <p>{frontmatter.date}</p>
     <div
       dangerouslySetInnerHTML={{ __html: html }}
     />
