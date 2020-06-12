@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
   body, html {
     color: #000;
     font-family: 'Nunito', sans-serif;
-    background: #EDF1F6;
+    background: #E5E5E5;
     display: block;
     padding: 0;
     margin: 0;
@@ -67,11 +67,10 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Container = styled.div`
-  padding-top: 90px;
   position: relative;
-  margin: 3rem auto;
+  margin: 20px auto;
   width: 98%;
-  max-width: 635px;
+  max-width: 740px;
   display: flex;
   flex-direction: column;
   align-items: center;

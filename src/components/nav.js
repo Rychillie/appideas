@@ -5,14 +5,13 @@ import styled from "styled-components"
 const Nav = styled.div`
     width: 100%;
     height: 100%;
-    max-height: 90px;
-    background: white;
+    max-height: 120px;
     display: flex;
+    background: #E5E5E5;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 15px 35px #0000000D;
-    position: fixed;
+    position: block;
     z-index: 999;
     top: 0;
 `
@@ -20,81 +19,38 @@ const Nav = styled.div`
 const Container = styled.div`
     position: relative;
     margin: 3rem auto;
-    width: 98%;
-    max-width: 635px;
+    width: 94%;
+    max-width: 1145px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (min-width: 45em) {
+        width: 98%;
+    }
 `
 
 const Title = styled.h1`
     text-align: center;
     display: block;
+    padding: 0;
+    margin: 0;
 `
 
 const StyledLink = styled(Link)`
     text-decoration: none;
+    font-weight: 900;
+    font-size: 24px;
     color: initial;
-`;
-
-const Menu = styled.div`
-    width: 25px;
-    height: 12px;
-    display: block;
-    background: transparent;
-    position: relative;
-    padding: 6px 0;
-
-    &:before {
-        content:"";
-        width: 100%;
-        height: 3px;
-        background: #000;
-        border-radius: 5px;
-        position: absolute;
-        display: block;
-        right: 0;
-        left: 0;
-        top: 4px;
-    }
-
-    &:after {
-        content:"";
-        width: 100%;
-        height: 3px;
-        background: #000;
-        border-radius: 5px;
-        position: absolute;
-        display: block;
-        bottom: 4px;
-        right: 0;
-        left: 0;
-    }
-
-    &:hover {
-        cursor: pointer;
-    }
+    text-transform: unset;
 `
-const NavList = styled.ul`
-    right: -20px;
-    width: 240px;
-    background: white;
-    text-align: center;
-    position: absolute;
-    text-decoration: none;
-    box-shadow: 0px 5px 15px #0000000D;
-    padding: 20px 35px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 200ms ease-in-out;
 
-    ${Menu}:hover & {
-        visibility: visible;
-        opacity: 1;
-    }
+const NavList = styled.ul`
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 `
 
 const NavItemList = styled.li`
@@ -106,8 +62,10 @@ const NavItemList = styled.li`
 
 const StyledNavLink = styled(Link)`
     display: block;
-    padding: 5px 10px;
+    padding: 5px 20px;
     text-decoration: none;
+    text-transform: unset;
+    font-weight: 700;
     color: initial;
     box-sizing: border-box;
 `
@@ -121,30 +79,23 @@ const Layout = () => (
                     AppIdeas
                 </StyledLink>
             </Title>
-            <Menu>
-                <NavList>
-                    <NavItemList>
-                        <StyledNavLink to="/">
-                            Projetos
-                        </StyledNavLink>
-                    </NavItemList>
-                    <NavItemList>
-                        <StyledNavLink to="/">
-                            Cursos
-                        </StyledNavLink>
-                    </NavItemList>
-                    <NavItemList>
-                        <StyledNavLink to="/">
-                            Como Usar
-                        </StyledNavLink>
-                    </NavItemList>
-                    <NavItemList>
-                        <StyledNavLink to="/about">
-                            Sobre
-                        </StyledNavLink>
-                    </NavItemList>
-                </NavList>
-            </Menu>
+            <NavList>
+                <NavItemList>
+                    <StyledNavLink to="/">
+                        projetos
+                    </StyledNavLink>
+                </NavItemList>
+                <NavItemList>
+                    <StyledNavLink to="/">
+                        cursos
+                    </StyledNavLink>
+                </NavItemList>
+                <NavItemList>
+                    <StyledNavLink to="/about">
+                        sobre
+                    </StyledNavLink>
+                </NavItemList>
+            </NavList>
         </Container>
     </Nav>
   </>
